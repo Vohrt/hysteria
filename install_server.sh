@@ -30,8 +30,8 @@ SYSTEMD_SERVICES_DIR="/etc/systemd/system"
 CONFIG_DIR="/etc/hysteria"
 
 # URLs of GitHub
-REPO_URL="https://github.com/apernet/hysteria"
-API_BASE_URL="https://api.github.com/repos/apernet/hysteria"
+REPO_URL="https://github.com/voheart/hysteria"
+API_BASE_URL="https://api.github.com/repos/voheart/hysteria"
 
 # curl command line flags.
 # To using a proxy, please specify ALL_PROXY in the environ variable, such like:
@@ -299,9 +299,9 @@ rerun_with_sudo() {
     chmod +x "$_tmp_script"
 
     if has_command curl; then
-      curl -o "$_tmp_script" 'https://raw.githubusercontent.com/apernet/hysteria/hy1/install_server.sh'
+      curl -o "$_tmp_script" 'https://raw.githubusercontent.com/voheart/hysteria/hy1/install_server.sh'
     elif has_command wget; then
-      wget -O "$_tmp_script" 'https://raw.githubusercontent.com/apernet/hysteria/hy1/install_server.sh'
+      wget -O "$_tmp_script" 'https://raw.githubusercontent.com/voheart/hysteria/hy1/install_server.sh'
     else
       return 127
     fi
@@ -970,7 +970,7 @@ perform_install() {
     echo
     echo -e "$(tbold)Hysteria 1 has been successfully update to $VERSION.$(treset)"
     echo
-    echo -e "Check out the latest changelog $(tblue)https://github.com/apernet/hysteria/blob/hy1/CHANGELOG.md$(treset)"
+    echo -e "Check out the latest changelog $(tblue)https://github.com/voheart/hysteria/blob/hy1/CHANGELOG.md$(treset)"
     echo
   fi
 }
